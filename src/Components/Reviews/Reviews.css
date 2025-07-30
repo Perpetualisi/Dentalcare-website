@@ -1,161 +1,168 @@
 .reviews {
-    padding: 50px 20px;
-    text-align: center;
-    background: #f8f9fa;
+  padding: 60px 20px;
+  background: #eef3f8;
+  text-align: center;
 }
 
 .reviews-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 40px;
+  font-weight: 700;
+  position: relative;
+}
+
+.reviews-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #00aaff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .review-card {
-    background: white;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+  background: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
 }
 
 .review-text {
-    font-size: 1.1rem;
-    color: #555;
-    margin: 15px 0;
-}
-
-.quote-icon {
-    font-size: 2rem;
-    color: #007bff;
-}
-
-.quote-icon.left {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.quote-icon.right {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  font-size: 1.15rem;
+  color: #444;
+  margin: 20px 0;
+  line-height: 1.6;
+  position: relative;
 }
 
 .reviewer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .review-image {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    border: 3px solid #007bff;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #00aaff;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.1);
 }
 
-h4 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 5px;
+.reviewer h4 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 5px;
 }
 
 .stars {
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
 }
 
 .star {
-    font-size: 1.2rem;
-    color: #ddd;
-    margin: 0 2px;
+  font-size: 1.3rem;
+  color: #ccc;
+  margin: 0 2px;
 }
 
-.star.filled {
-    color: #ffc107;
-}
-
+.star.filled,
 .star.half {
-    color: #ffc107;
+  color: #ffc107;
 }
 
 .navigation {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
 }
 
 .navigation button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #007bff;
-    margin: 0 10px;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #00aaff;
+  transition: color 0.3s ease;
 }
 
 .navigation button:hover {
-    color: #0056b3;
+  color: #0077cc;
 }
 
-
+/* Responsive */
 @media (max-width: 768px) {
-    .review-card {
-        max-width: 90%;
-        padding: 20px;
-    }
+  .reviews-title {
+    font-size: 2rem;
+  }
 
-    .review-text {
-        font-size: 1rem;
-    }
+  .review-card {
+    padding: 25px 20px;
+  }
 
-    .review-image {
-        width: 70px;
-        height: 70px;
-    }
+  .review-text {
+    font-size: 1rem;
+  }
 
-    .star {
-        font-size: 1rem;
-    }
+  .review-image {
+    width: 70px;
+    height: 70px;
+  }
 
-    .navigation button {
-        font-size: 1.3rem;
-    }
+  .reviewer h4 {
+    font-size: 1.1rem;
+  }
+
+  .star {
+    font-size: 1.1rem;
+  }
+
+  .navigation button {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .reviews-title {
-        font-size: 1.8rem;
-    }
+  .reviews-title {
+    font-size: 1.8rem;
+  }
 
-    .review-card {
-        max-width: 95%;
-    }
+  .review-card {
+    padding: 20px 15px;
+  }
 
-    .quote-icon {
-        font-size: 1.5rem;
-    }
+  .review-text {
+    font-size: 0.95rem;
+  }
 
-    .review-text {
-        font-size: 0.9rem;
-    }
+  .review-image {
+    width: 60px;
+    height: 60px;
+  }
 
-    .review-image {
-        width: 60px;
-        height: 60px;
-    }
+  .reviewer h4 {
+    font-size: 1rem;
+  }
 
-    .star {
-        font-size: 0.9rem;
-    }
+  .star {
+    font-size: 1rem;
+  }
 
-    .navigation button {
-        font-size: 1.2rem;
-    }
+  .navigation button {
+    font-size: 1.2rem;
+  }
 }

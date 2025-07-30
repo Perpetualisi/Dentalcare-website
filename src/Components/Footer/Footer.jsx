@@ -6,10 +6,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   const location = useLocation();
 
-  
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
-    if (element) {
+    if (element && location.pathname === "/") {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -23,7 +22,6 @@ const Footer = () => {
           <p>Your smile is our priority.</p>
         </div>
 
-        
         <div className="footer-section">
           <h3>Quick Links</h3>
           <ul>
@@ -34,38 +32,35 @@ const Footer = () => {
           </ul>
         </div>
 
-        
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>
             📍 <a href="https://goo.gl/maps/xyz123" target="_blank" rel="noopener noreferrer">Lagos, Nigeria</a>
           </p>
           <p>
-            📞 <a href="tel:+2348103558837">+234-810-355-8837</a>
+            📞 <a href="tel:+2344567891233">+234-456-789-1233</a>
           </p>
           <p>
-            📧 <a href="mailto:perpetualokan0@gmail.com">perpetualokan0@gmail.com</a>
+            📧 <a href="mailto:DentalCare@gmail.com">DentalCare@gmail.com</a>
           </p>
         </div>
 
-        
         <div className="footer-section">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook"></i>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <i className="fab fa-instagram"></i>
             </a>
           </div>
         </div>
       </div>
 
-  
       <div className="footer-bottom">
         <p>© {currentYear} DentalCare. All Rights Reserved.</p>
       </div>
